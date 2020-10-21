@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  {{ title }}
+</mat-toolbar>
+<div class="basic-container">
+  <div>
+        <mat-nav-list>
+            <a
+              mat-list-item
+              *ngFor="let item of items"
+              class="item-link">
+              <span class="item-text">{{ item }}</span>
+              </a>
+        </mat-nav-list> 
+  </div>
+  <span class="version-info">Current build: {{version.full}}</span>
+</div>
