@@ -9,7 +9,7 @@ import data from "./data/db.json";
 @Component({
   selector: "material-app",
   templateUrl: "app.component.html",
-  styleUrls: ["app.component.css"]
+  styleUrls: ["app.component.scss"]
 })
 export class AppComponent implements OnInit {
   public items: string[] = ["Item 1", "Item 2", "Item 3"];

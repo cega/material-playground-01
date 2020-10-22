@@ -11,10 +11,19 @@ import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 
 import { MaterialModule } from "./modules/material.module";
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { DataService } from "./services/data";
 import { AppComponent } from "./app.component";
+import { CategoryComponent, QuestionComponent, TagComponent } from "./components";
 
 @NgModule({
+  declarations: [
+    AppComponent,
+    CategoryComponent,
+    QuestionComponent,
+    TagComponent
+    ],
   imports: [
     BrowserModule,
     CommonModule,
@@ -22,10 +31,10 @@ import { AppComponent } from "./app.component";
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService, { delay: 300 })
   ],
-  declarations: [AppComponent],
   bootstrap: [AppComponent],
   providers: []
 })
